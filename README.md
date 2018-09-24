@@ -50,14 +50,32 @@ Introduction: [http://pythontesting.net/framework/unittest/unittest-introduction
 
 Documentation: [http://docs.python.org/2/library/unittest.html](http://docs.python.org/2/library/unittest.html)
 
+Assertions methods: [https://docs.python.org/2/library/unittest.html#unittest.TestCase](https://docs.python.org/2/library/unittest.html#unittest.TestCase)
+
+###### Execute examples:
+
+```
+$ python -m unittest discover test
+```
+
 
 #### PyTest
 Introduction: [http://pythontesting.net/framework/pytest/pytest-introduction/](http://pythontesting.net/framework/pytest/pytest-introduction/)
+
+###### Execute examples:
+
+```
+$ pytest -s test
+```
+
+Note that `pytest` auto-detects also unittest-based test cases.
 
 
 ## Selenium
 
 Introduction: [https://selenium-python.readthedocs.io/getting-started.html](https://selenium-python.readthedocs.io/getting-started.html)
+
+Documentation: [https://seleniumhq.github.io/selenium/docs/api/py/index.html](https://seleniumhq.github.io/selenium/docs/api/py/index.html)
 
 #### 1. Start demoapp
 
@@ -67,7 +85,7 @@ $ python demoapp-login/server.py
 
 Open [http://localhost:7272/](http://localhost:7272/)
 
-Try to login with username `demo` and password `mode` and with invalid credentials
+Try to login with username `demo` and password `mode` and with invalid credentials.
 
 
 #### 2. Run sample test

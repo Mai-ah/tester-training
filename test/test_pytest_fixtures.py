@@ -20,22 +20,22 @@ def teardown_function(function):
 
 
 def test_numbers_3_4():
-    print 'test_numbers_3_4  <============================ actual test code'
+    print "test_case          test_numbers_3_4"
     assert multiply(3, 4) == 12
 
 
 def test_strings_a_3():
-    print 'test_strings_a_3  <============================ actual test code'
-    assert multiply('a', 3) == 'aaa'
+    print "test_case          test_strings_a_3"
+    assert multiply("a", 3) == "aaa"
 
 
-class TestUM:
+class TestPytestFixtures(object):
 
     def setup(self):
-        print ("setup             class:TestStuff")
+        print ("setup")
 
     def teardown(self):
-        print ("teardown          class:TestStuff")
+        print ("teardown")
 
     def setup_class(cls):
         print ("setup_class       class:%s" % cls.__name__)
@@ -50,12 +50,12 @@ class TestUM:
         print ("teardown_method   method:%s" % method.__name__)
 
     def test_numbers_5_6(self):
-        print 'test_numbers_5_6  <============================ actual test code'
+        print "test_case          test_numbers_5_6"
         assert multiply(5, 6) == 30
 
     def test_strings_b_2(self):
-        print 'test_strings_b_2  <============================ actual test code'
-        assert multiply('b', 2) == 'bb'
+        print "test_case          test_strings_b_2"
+        assert multiply("b", 2) == "bb"
 
 
 if __name__ == "__main__":
