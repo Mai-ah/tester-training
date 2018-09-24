@@ -75,7 +75,7 @@ Note that `pytest` auto-detects also unittest-based test cases.
 
 Introduction: [https://selenium-python.readthedocs.io/getting-started.html](https://selenium-python.readthedocs.io/getting-started.html)
 
-Documentation: [https://seleniumhq.github.io/selenium/docs/api/py/index.html](https://seleniumhq.github.io/selenium/docs/api/py/index.html)
+Documentation: [https://seleniumhq.github.io/selenium/docs/api/py/api.html](https://seleniumhq.github.io/selenium/docs/api/py/api.html)
 
 #### 1. Start demoapp
 
@@ -108,3 +108,58 @@ Take a look at screeenshots in `selenium/reports` folder.
         """TODO: invalid login scenario"""
         pass
 ```
+
+## Flask test client
+
+Doc: [http://flask.pocoo.org/docs/1.0/testing/](http://flask.pocoo.org/docs/1.0/testing/)
+
+
+#### 1. Start sample RestAPI
+
+```
+$ python test_client/app.py
+```
+
+Open [http://localhost:5000/ui](http://localhost:5000/ui) and try out sample Rest API
+
+#### 2. Run sample tests
+
+```
+$ pytest test_client
+```
+
+#### 3. Create automated test for new Pet creation
+
+```
+def test_get_pets_on_empty_db(client):
+    result = client.get('/pets')
+    assert result.status_code == 200
+    assert result.json == []
+
+
+def test_put_pet(client):
+    # TODO: Pet creation scenario
+    pass
+```
+
+## Robot Framework
+
+Website: [http://robotframework.org/](http://robotframework.org/)
+
+User guide and standard libraries docs: [http://robotframework.org/robotframework/](http://robotframework.org/robotframework/)
+
+Selenium library: [http://robotframework.org/SeleniumLibrary/SeleniumLibrary.html](http://robotframework.org/SeleniumLibrary/SeleniumLibrary.html)
+
+#### 1. Start demoapp
+
+```
+$ python demoapp-login/server.py
+```
+
+#### 2. Run sample tests
+
+```
+$ pybot -d robot/results robot
+```
+
+#### 3. Open log: `robot/results/log.html`

@@ -13,7 +13,7 @@ logging.basicConfig(level=logging.INFO)
 connexion_app = connexion.App(__name__)
 
 app = connexion_app.app
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
