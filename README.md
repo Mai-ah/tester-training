@@ -80,7 +80,7 @@ Documentation: [https://seleniumhq.github.io/selenium/docs/api/py/api.html](http
 #### 1. Start demoapp
 
 ```
-$ python demoapp-login/server.py
+$ python demoapp/server.py
 ```
 
 Open [http://localhost:7272/](http://localhost:7272/)
@@ -153,7 +153,7 @@ Selenium library: [http://robotframework.org/SeleniumLibrary/SeleniumLibrary.htm
 #### 1. Start demoapp
 
 ```
-$ python demoapp-login/server.py
+$ python demoapp/server.py
 ```
 
 #### 2. Run sample tests
